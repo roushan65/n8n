@@ -1,0 +1,53 @@
+{
+    "meta": {
+      "instanceId": "4e5337e86911914573cf0ce682c5d309ca334953f4527f2984f5db5dac6cf08c"
+    },
+    "nodes": [
+      {
+        "parameters": {
+          "jsCode": "console.log(\"Executing here...\")\nreturn {}"
+        },
+        "id": "024fb264-e394-4519-99c5-1cb92da3199b",
+        "name": "Code",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 1,
+        "position": [
+          1180,
+          500
+        ]
+      },
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "field": "seconds",
+                "secondsInterval": 3
+              }
+            ]
+          }
+        },
+        "id": "97707675-ad54-420c-8f2f-43e067329b4c",
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "typeVersion": 1,
+        "position": [
+          720,
+          500
+        ]
+      }
+    ],
+    "connections": {
+      "Schedule Trigger": {
+        "main": [
+          [
+            {
+              "node": "Code",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    }
+  }
